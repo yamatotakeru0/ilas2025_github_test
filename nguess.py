@@ -6,4 +6,7 @@ answer = random.randint(1, 100)
 if guess == answer :
     print('Good guess')
 else:
-    print('Bad guess')
+    if (guess < answer):
+        print('Too low')
+    else:
+        print('Too high')
