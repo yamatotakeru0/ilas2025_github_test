@@ -1,14 +1,13 @@
 import random
-
+answer = random.randint(1, 100)
+#print("answer is" , answer)
 guess = int(input('guess='))
 print('Your guess is', guess)
-answer = random.randint(1, 100)
-if guess == answer :
-    print('Good guess')
-elif guess < answer:
-    print('Too low')
-else:
-    if (guess < answer):
-        print('Too low')
-    else:
-        print('Too high')
+truth = 0
+while truth == 0 :
+    if guess == answer :
+        print('Good guess')
+        truth = 1
+    else :
+        guess = int(input('guess='))
+        print('Your guess is', guess)
